@@ -224,15 +224,16 @@ def main():
 #            break
 
         see_data = input('\nWould you like to see the raw data? Enter yes or no.\n')
-        if see_data.lower() == "yes":
+        if see_data.lower() in ("yes", "y"):
             print(df.iloc[0:5])
             i=0
             see_more='yes'
             while see_more=='yes':
                 see_more=input('\nWould you like to see more? Enter yes or no.\n')
-                if see_more.lower()  != 'yes':
+                if see_more.lower() not in ("yes", "y"):
                     break
                 else:
+                    see_more='yes'
                     i+=5
                     print(df.iloc[i:(i+5)])
                     if (i+5)>=df.last_valid_index():
