@@ -143,7 +143,7 @@ def station_stats(df):
 
     # display most frequent combination of start station and end station trip
     combo=df.groupby(['Start Station','End Station'])['Trip Duration'].size().idxmax()
-    print("\nThe most frequent combination goes from {} station to {} station".format(*combo))
+    print("\nThe most frequent combination goes from {} station to {} station.".format(*combo))
     print()
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -214,14 +214,6 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
 
-
-#    while True:
-#        city=input("Would you like to see data for Chicago, New York, or Washington?:  ")
-#        city=city.lower()
-#        if city not in ("chicago","new york","washington"):
-#            print("Not a valid choice (ex. Chicago, New York, Washington)")
-#        else:
-#            break
 
         see_data = input('\nWould you like to see the raw data? Enter yes or no.\n')
         if see_data.lower() in ("yes", "y"):
