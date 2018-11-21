@@ -218,14 +218,6 @@ def main():
         user_stats(df)
 
 
-#    while True:
-#        city=input("Would you like to see data for Chicago, New York, or Washington?:  ")
-#        city=city.lower()
-#        if city not in ("chicago","new york","washington"):
-#            print("Not a valid choice (ex. Chicago, New York, Washington)")
-#        else:
-#            break
-
         see_data = input('\nWould you like to see the raw data? Enter yes or no.\n')
         if see_data.lower() == "yes":
             print(df.iloc[0:5])
